@@ -29,26 +29,26 @@ The architecture of Jupyter is language independent. The decoupling between the 
 
 # Outcomes & Analysis-
  
- 	  Lineplot-
-       This lineplot will gives you statewise positive cases out of Total Samples.
-       This lineplot will gives you Datewise positive cases out of Total Samples
-       It is on  the world’s data representing the no of people fully vaccinated on specific dates.	
+ 	 Lineplot-
+            This lineplot will gives you statewise positive cases out of Total Samples.
+            This lineplot will gives you Datewise positive cases out of Total Samples
+            It is on  the world’s data representing the no of people fully vaccinated on specific dates.	
 
-	  Boxplot-	  
-       Here boxplot is representing Total Samples according to states   	 
+	 Boxplot-	  
+            Here boxplot is representing Total Samples according to states   	 
 
-   	Heatmap-
-       This heatmap contains representing various shades of the same colour foreach value to be plotted.
+   	 Heatmap-
+            This heatmap contains representing various shades of the same colour foreach value to be plotted.
 	
-	 	Catplot-
-        These plot are basically used for visualizing the relationship between variables .It gives  Total sample counts in various states.
+	Catplot-
+            These plot are basically used for visualizing the relationship between variables .It gives  Total sample counts in various states.
 	 
    	Barplot-
-        A barplot shows categorical data as rectangular bars with the height of bars proportional to the value they represent.   
+            A barplot shows categorical data as rectangular bars with the height of bars proportional to the value they represent.   
         
-    Relplot-
-        This visualizes statistical realtionsip using two common approaches.It shows the no.of positive cases from the Total samples.
-        This graph represents the world’s data on the basis of people fully vaccinated according to the country
+        Relplot-
+            This visualizes statistical realtionsip using two common approaches.It shows the no.of positive cases from the Total samples.
+            This graph represents the world’s data on the basis of people fully vaccinated according to the country
         
         
 # Algorithm-
