@@ -61,20 +61,17 @@ The architecture of Jupyter is language independent. The decoupling between the 
    Step7:- Take input from dataset
                Plot1:- Coordinates(Total Sample, Positive)
                              Hue(States)
-               Plot2:- Coordinates(Positive, Total Samples)
-               Plot3:- Coordinates(Negative, Total Samples)
-               Plot4:- Coordinates(State, Total Samples)
-               Plot5:- Coordinates(State, Total Samples)
-               Plot6:- Coordinates(State, Total Samples)
-               Plot7:- Cooridinates(x=Total Samples,color= purple)
-               Plot8:- Coordinates(TotalSamples,State,palette(Wistia_r))
-               Plot9:- Coordinates(Total Sample, Positive)
-               Plot10:- Coordinates(Total Sample, State)
+               Plot2:- Coordinates(State, Total Samples)
+               Plot3:- Coordinates(State, Total Samples)
+               Plot4:- Cooridinates(x=Total Samples,color= purple)
+               Plot5:- Coordinates(TotalSamples,State,palette(Wistia_r))
+               Plot6:- Coordinates(Total Sample, Positive)
+               Plot7:- Coordinates(Total Sample, State)
                               ( legend="full",palette="nipy_spectral_r")
-               Plot11:- Coordinates(Total Sample, Positive)
+               Plot8:- Coordinates(Total Sample, Positive)
                            (hue=State,legend=full,palette="gist_ncar_r")
-               Plot12:- PC read
-               Plot13:- Coordinates(Total Sample, Positive) hue=Date,legend=full,palette="gnuplot2_r
+               Plot9:- PC read
+               Plot10:- Coordinates(Total Sample, Positive) hue=Date,legend=full,palette="gnuplot2_r
 
     
     Step8:- End
@@ -104,31 +101,18 @@ ax=sns.lineplot(x="TotalSamples",y="Positive",data=read, hue="State")
 # In[3]:
 
 
-ax=sns.relplot(x="Positive",y="TotalSamples",data=read)
-
-
-# In[4]:
-
-
-
-ax=sns.relplot(x="Negative",y="TotalSamples",data=read)
-
-
-# In[5]:
-
-
 plt.figure(figsize=(12,6))
 ax=sns.boxplot(x="State",y="TotalSamples",data=read)
 
 
-# In[6]:
+# In[4]:
 
 
 plt.figure(figsize=(13,6))
 ax=sns.barplot(x="State",y="TotalSamples",data=read)
 
 
-# In[7]:
+# In[5]:
 
 
 plt.figure(figsize=(12,6))
@@ -136,63 +120,49 @@ x=read["TotalSamples"].values
 sns.distplot(x,color="Purple")
 
 
-# In[8]:
+# In[6]:
 
 
 plt.figure(figsize=(12,6))
 ax=sns.barplot(x="TotalSamples",y="State",data=read,palette="Wistia_r")
 
 
-# In[9]:
+
+# In[7]:
 
 
 plt.figure(figsize=(12,6))
-ax=sns.scatterplot(x="TotalSamples",y="Positive",data=read,legend="full")
+ax=sns.catplot(x="TotalSamples",y="State",data=read,legend="full",palette="nipy_spectral_r"
 
 
-
-# In[10]:
-
-
-plt.figure(figsize=(12,6))
-ax=sns.catplot(x="TotalSamples",y="State",data=read,legend="full",palette="nipy_spectral_r")
-
-
-# In[11]:
-
-
-plt.figure(figsize=(12,6))
-ax=sns.regplot(x="TotalSamples",y="Positive",data=read)
-
-
-# In[12]:
+# In[8]:
 
 
 plt.figure(figsize=(12,6))
 ax=sns.relplot(x="TotalSamples",y="Positive",data=read,hue="State",legend="full",palette="gist_ncar_r")
 
 
-# In[13]:
+# In[9]:
 
 
 pc=read[["TotalSamples","Date","State","Positive","Negative"]]
 pc
 
 
-# In[14]:
+# In[10]:
 
 
 plt.figure(figsize=(12,5))
 ax=sns.lineplot(x="TotalSamples",y="Positive",data=read,hue="Date",legend="full",palette="gnuplot2_r”
 
 
-# In[15]:
+# In[11]:
 
 
 import plotly.express as px
 
 
-# In[16]:
+# In[12]:
 
 
 pip install plotly
