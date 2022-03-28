@@ -170,11 +170,53 @@ pip install plotly
 
 
 
+# World Dataset:-
 
 
+# In[1]:
 
 
+import numpy as np
+import matplotlib.pyplot as plt
+import plotly.express as px
+import plotly.graph_objects as go
+import matplotlib.patches as mpatches
+from plotly.subplots import make_subplots
+import pandas as pd 
+import seaborn as sns
+sns.set(color_codes=True)
+sns.set(style="whitegrid")
+import plotly.figure_factory as ff
+from plotly.colors import n_colors
+read=pd.read_csv(r"C:\Users\Samruddhi\Downloads\vaccination.csv")
+print(read)
 
 
-	
+# In[2]:
+
+
+plt.figure(figsize=(12,6))
+ax=sns.lineplot(x="date",y="people_fully_vaccinated",data=read,hue='location')
+ax.legend(loc='right')
+
+
+# In[3]:
+
+
+plt.figure(figsize=(14,8))
+ax=sns.relplot(x="location",y="people_fully_vaccinated",data=read,hue='location')
+
+
+# In[4]
+
+pc=read[['location','total_vaccinations','daily_people_vaccinated','people_fully_vaccinated','total_vaccinations_per_hundred','people_vaccinated_per_hundred','daily_vaccinations']]
+pc
+
+
+# In[5]:
+
+
+plt.figure(figsize=(12,6))
+sns.heatmap(pc.corr(),cmap='RdBu',vmax=1,vmin=-1)
+
 
